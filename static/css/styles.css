@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    /* background-color: #1d1f2735; */
+}
+
+.navbar {
+    /* background-color: azure; */
+    background-color: #1e3a5f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .links li a {
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+
+.navbar .links li a:hover {
+    color: aqua;
+}
+
+
+.home {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:10px;
+    padding: 20px 60px;
+    background: linear-gradient(135deg, #1e3a5f, #4a6fa5); /* Nice blue gradient */
+    color: white;
+    min-height:fit-content;
+}
+
+.home .content h1{
+    padding: 10px 0px;
+    font-size:3.5rem;;
+} 
+
+.home .content p{
+    margin-bottom: 30px;
+}
+
+.home p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.3);
+}
+
+
+.home img {
+    padding: 10px 0px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.aboutckd {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #1e3a5f, #a3c1ee);
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.aboutckd h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+}
+
+.aboutckd .ckdvalues {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.aboutckd .ckdvalues div {
+    border: none;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4a6fa5, #7ca8e2);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.aboutckd .ckdvalues div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.aboutckd .ckdvalues h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff9f9;
+}
+
+.aboutckd .ckdvalues p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+

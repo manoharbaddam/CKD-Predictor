@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Kidney Disease Prediction</title>
+    <link rel="stylesheet" href="/static/css/predict.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/templates/index.html" class="logo">CKD Predictor</a>
+        <ul class="links">
+            <li><a href="/templates/index.html">Home</a></li>
+            <li><a href="#aboutckd">About CKD</a></li>
+            <li><a href="/templates/predict.html">Predict CKD</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>🔬 Kidney Disease Prediction</h1>
+
+        <div class="grid-wrapper">
+            <div class="form-container block">
+                <h2>Enter Patient Details Below</h2>
+                <form action="/predict" method="POST">
+
+                    <div class="form-group">
+                        <label for="model">Choose a Model</label>
+                        <select id="model" name="model">
+                            <option value="RandomForest">Random Forest</option>
+                            <option value="AdaBoost">AdaBoost</option>
+                            <option value="GradientBoosting">GradientBoosting</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sg">Specific Gravity (sg)</label>
+                            <input type="number" id="sg" name="sg" step="0.001" min="1.005" max="1.025" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hemo">Hemoglobin (g/dL)</label>
+                            <input type="number" id="hemo" name="hemo" step="0.1" min="3.0" max="17.0" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rc">Red Blood Cell Count (millions/cmm)</label>
+                            <input type="number" id="rc" name="rc" step="0.1" min="2.0" max="7.0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pc">Pus Cell</label>
+                            <select id="pc" name="pc">
+                                <option value="0">Normal</option>
+                                <option value="1">Abnormal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="htn">Hypertension</label>
+                            <select id="htn" name="htn">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dm">Diabetes Mellitus</label>
+                            <select id="dm" name="dm">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="al">Albumin</label>
+                        <select id="al" name="al" required>
+                            <option value="">-- Select Albumin Level --</option>
+                            <option value="0">0 - None</option>
+                            <option value="1">1 - Trace</option>
+                            <option value="2">2 - Mild</option>
+                            <option value="3">3 - Moderate</option>
+                            <option value="4">4 - Heavy</option>
+                            <option value="5">5 - Very Heavy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appet">Appetite</label>
+                        <select id="appet" name="appet">
+                            <option value="1">Good</option>
+                            <option value="0">Poor</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Predict CKD</button>
+                </form>
+            </div>
+
+            <div class="info block">
+                <h2>Paramater</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero rem hic alias aliquam omnis
+                    sapiente, laboriosam ipsam repellendus asperiores commodi!</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
