@@ -10,12 +10,12 @@
 
 <body>
 
-    <nav class="navbar">
-        <a href="/templates/index.html" class="logo">CKD Predictor</a>
+    <nav class="navbar" aria-label="Main Navigation">
+        <a href="{{ url_for('index') }}" class="logo">CKD Predictor</a>
         <ul class="links">
-            <li><a href="/templates/index.html">Home</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="#aboutckd">About CKD</a></li>
-            <li><a href="/templates/predict.html">Predict CKD</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict CKD</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -29,9 +29,9 @@
                 <strong>It only takes a minute to check how your kidneys are doing. Let’s take a quick look
                     together!</strong>
             </p>
-            <a href="/templates/predict.html" class="cta-btn">Check My Kidney Health</a>
+            <a href="{{ url_for('predict')}}" class="cta-btn">Check My Kidney Health</a>
         </div>
-        <div><img src="/static/images/" alt="" srcset=""></div>
+        <div><img src="{{ url_for('static', filename = 'images/kidney.svg') }}" alt="Illustration of kidney" ></div>
     </section>
 
     <section id="aboutckd" class="aboutckd">
