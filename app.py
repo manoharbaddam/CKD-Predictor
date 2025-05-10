@@ -11,7 +11,6 @@ def index():
 @app.route("/predict", methods=["GET", "POST"])
 def predict():
     if request.method == "POST":
-        # Example: collect input from form
         sg = request.form.get("sg")
         hemo = request.form.get("hemo")
         rc = request.form.get("rc")
@@ -39,14 +38,18 @@ def predict():
         else:
             result = None
             
-        if result is not None:
-            if result == 1:
-                prediction = f"⚠️ High Risk of CKD {model}  {data} {result}"
-            else :
-                prediction = f"The person is not likely to have CKD."
-            
-        return render_template("predict.html", prediction=prediction)
-
+        return render_template("result.html", pred=result, form_data={
+    "sg": sg,
+    "hemo": hemo,
+    "rc": rc,
+    "pc":"Abnormal" if pc==0 else "Normal",
+    "htn":"Yes" if htn==1 else "No",
+    "dm": "Yes" if dm==1 else "No",
+    "al": al,
+    "appet":"Good" if appet==1 else "No",
+    "model": model
+})
+        
     return render_template("predict.html")
 
 if __name__ == "__main__":

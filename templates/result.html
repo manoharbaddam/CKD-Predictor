@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Prediction Result</title>
+    <link rel="stylesheet" href="/static/css/result.css">
+</head>
+<body>
+    <div class="result-container">
+        {% if pred == 1 %}
+            <div class="result alert alert-danger">POSITIVE. The patient might have the disease.</div>
+        {% else %}
+            <div class="result alert alert-success">NEGATIVE. The patient is healthy.</div>
+        {% endif %}
+
+        <h3>User Input:</h3>
+        <ul>
+            <li><strong>Specific Gravity:</strong> {{ form_data.sg }}</li>
+            <li><strong>Hemoglobin:</strong> {{ form_data.hemo }}</li>
+            <li><strong>RBC Count:</strong> {{ form_data.rc }}</li>
+            <li><strong>Pus Cell:</strong> {{ form_data.pc }}</li>
+            <li><strong>Hypertension:</strong> {{ form_data.htn }}</li>
+            <li><strong>Diabetes Mellitus:</strong> {{ form_data.dm }}</li>
+            <li><strong>Albumin:</strong> {{ form_data.al }}</li>
+            <li><strong>Appetite:</strong> {{ form_data.appet }}</li>
+            <li><strong>Model Selected:</strong> {{ form_data.model }}</li>
+        </ul>
+
+        <a href="{{ url_for('index') }}" class="back-btn">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -14,10 +14,7 @@
         <a href="{{ url_for('index') }}" class="logo">CKD Predictor</a>
         <ul class="links">
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="#aboutckd">About CKD</a></li>
             <li><a href="{{ url_for('predict') }}">Predict CKD</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
@@ -112,26 +109,21 @@
 
 
                     <button type="submit">Predict CKD</button>
-                    {% if prediction %}
-                    <div class="result">
-                        <h3>Prediction Result:</h3>
-                        <p><strong>{{ prediction }}</strong></p>
-                    </div>
-                    {% endif %}
-
                 </form>
 
             </div>
 
             <div class="parameter-info block" id="parameterInfo">
-                <h2 id="inputParameter">Parameter</h2>
-                <p id="paramText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero rem hic alias aliquam
-                    omnis
-                    sapiente, laboriosam ipsam repellendus asperiores commodi!</p>
+                <h2 id="inputParameter">Parameter Information</h2>
+                <p id="paramText">Select a parameter to view detailed information about it. This will help you better
+                    understand its significance and the role it plays in the analysis.</p>
             </div>
+
 
         </div>
     </section>
+
+    
 
     <script src="{{url_for('static', filename= 'script.js')}}"></script>
 </body>

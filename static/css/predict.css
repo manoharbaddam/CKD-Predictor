@@ -1,79 +1,255 @@
-*{
-  margin:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-h1{
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+}
+
+h1 {
   padding: 20px;
   text-align: center;
   font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
 }
 
-section{
-  background: linear-gradient(135deg , #46aaf1,#a7cffb);
+section {
+  background: linear-gradient(135deg, #46aaf1, #a7cffb);
   padding: 20px;
-  padding-top: 0;;
+  padding-top: 0;
   min-height: 100vh;
-
+  justify-content: center;
+  align-items: center;
 }
 
-
-.grid-wrapper{
+.grid-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
   gap: 20px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-wrapper .block {
+  border: 1px solid #ddd;
   padding: 20px;
-  border: black solid ;
   border-radius: 8px;
-  background-color: aquamarine;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-.grid-wrapper .block{
-  /* border: green solid; */
-  padding:10px;
-}
-
-form{
-  padding:4px;
-  background-color: bisque;
+form {
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* border: red solid; */
-  margin:8px;
-  padding: 6px;
-  background-color: rgb(228, 183, 151);
+  margin-bottom: 20px;
 }
 
-.form-row{
+.form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
+input[type="number"], input[type="radio"], select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 100%;
+  transition: border 0.3s ease;
+}
 
-.model-buttons button {
+input[type="number"]:focus, select:focus {
+  border-color: #46aaf1;
+  outline: none;
+}
+
+.model-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.model-buttons input[type="radio"] {
+  display: none;
+}
+
+.model-buttons label {
   padding: 10px 20px;
-  margin-right: 10px;
-  border: 1px solid #333;
-  background-color: white;
   cursor: pointer;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.model-buttons button.active {
+.model-buttons input[type="radio"]:checked + label {
   background-color: #46aaf1;
   color: white;
-  border-color: #2a4c78;
 }
 
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #46aaf1;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2a4c78;
+}
+
+.parameter-info {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.parameter-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.parameter-info p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.parameter-info ul {
+  padding-left: 20px;
+  list-style-type: square;
+  text-align: justify;
+}
+
+.parameter-info li {
+  font-size: 1rem;
+  color: #555;
+  margin: 8px 0;
+  text-align: justify;
+}
+
+.parameter-info strong {
+  color: #333;
+}
+
+
+/* Tablet Devices (≤ 1024px) */
+@media (max-width: 1024px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr; /* Stack form and parameter info */
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Stack inputs vertically */
+  }
+
+  .model-buttons {
+    flex-direction: column;
+  }
+
+  .model-buttons label {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile Devices (≤ 768px) */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  .grid-wrapper {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  input[type="number"], select {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .parameter-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .parameter-info p,
+  .parameter-info li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Devices (≤ 480px) */
+@media (max-width: 480px) {
+  .model-buttons {
+    flex-direction: column;
+  }
+
+  .model-buttons label {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .parameter-info {
+    padding: 15px;
+  }
+
+  .parameter-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .parameter-info p,
+  .parameter-info li {
+    font-size: 0.9rem;
+  }
+}
 

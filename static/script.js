@@ -28,8 +28,8 @@ const parameterDetails = {
 <ul>
   <li><strong>Normal range:</strong></li>
   <ul>
-    <li><strong>Men:</strong> 4.7–6.1 million/cmm</li>
-    <li><strong>Women:</strong> 4.2–5.4 million/cmm</li>
+    <li><strong>Men:</strong> 4.7–6.1 mill/cmm</li>
+    <li><strong>Women:</strong> 4.2–5.4 mill/cmm</li>
   </ul>
   <li><strong>Low RBC:</strong> Anemia (fatigue, weakness).</li>
   <li><strong>High RBC:</strong> Can indicate dehydration or other issues.</li>
