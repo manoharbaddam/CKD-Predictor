@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronic Kidney Disease Prediction</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -28,7 +30,7 @@
             </p>
             <a href="{{ url_for('predict')}}" class="cta-btn">Check My Kidney Health</a>
         </div>
-        <div><img src="{{ url_for('static', filename = 'images/kidney.svg') }}" alt="Illustration of kidney" ></div>
+        <div><img src="{{ url_for('static', filename = 'images/kidney.svg') }}" alt="Illustration of kidney"></div>
     </section>
 
     <section id="aboutckd" class="aboutckd">
@@ -74,6 +76,21 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 All rights are reserved. </p> <br>
+            <a href="https://www.linkedin.com/in/manohar-reddy-baddam-6693b0255/" target="_blank">Manohar Reddy Baddam</a>
+            <ul class="footer-links">
+                <li><a href="mailto:manoharbaddam789@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                <li><a href="https://github.com/manoharbaddam" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/manohar-reddy-baddam-6693b0255/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
 </body>
 
 </html>
