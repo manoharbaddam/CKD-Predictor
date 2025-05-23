@@ -25,11 +25,11 @@ def predict():
         data = np.array([[sg, htn, hemo, dm, al, appet, rc, pc]])
 
         # Load models
-        with open("models/tunned_kidney_Cancer_model.pkl", "rb") as f:
+        with open("Models/tunned_kidney_Cancer_model.pkl", "rb") as f:
             model_tunned_rf = pickle.load(f)
-        with open("models/AdaBoost_model.pkl", "rb") as f:
+        with open("Models/AdaBoost_model.pkl", "rb") as f:
             model_adb = pickle.load(f)
-        with open("models/GradientBoosting_model.pkl", "rb") as f:
+        with open("Models/GradientBoosting_model.pkl", "rb") as f:
             model_gb = pickle.load(f)
 
         # Select and predict
